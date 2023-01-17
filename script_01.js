@@ -62,17 +62,38 @@
 // Postulat: one function = one job (uncle Bob)
 // SRP single responsibility principle
 
-ausgabeNamenParams("Max", "Mütze");
+// ausgabeNamenParams("Max", "Mütze");
 
-function ausgabeNamenParams(firstName, familyName) {
-
-    // 1. Funktionalität: string composing
+function ausgabeNamenParams(firstName, familyName) 
+{
     const gap = " ";
     let outputStr = "Hallo" + gap + firstName + gap + familyName +"!";
+}
+//     // 1. Funktionalität: string composing
+    
 
 
-    // 2. Funktionalität: string output
+//     // 2. Funktionalität: string output
 
-    console.log(outputStr);
+
+/******Funktionen 03b ****/
+// Trennen der Funktionalitäten | return
+
+
+// 1. Funktionalität: sting composing
+output(getString("Max","Mütze")); //call
+output("Hallo Max Mütze!");
+function getString(firstName, familyName) 
+{
+    const GAP = " ";
+    let outputStr = "Hallo" + GAP + firstName + GAP + familyName +"!";
+    return outputStr // return sendet Daten an den call zurück
+    console.log("Funktion beendet"); // return bricht die Fkt ab!
 }
 
+
+/* 2. Funktionalität: string output */
+// output("Hi");// Call ...
+function output(outputData) {
+    console.log(outputData)
+}
