@@ -37,10 +37,22 @@
 
 // Beispiel von Dozent
 
-ausgabeNamenParam("Martin"); // Call + Argument(e)
-ausgabeNamenParam("Lawrence");
-// Argumente sind Daten für Parameter
+// ausgabeNamenParam("Martin"); // Call + Argument(e)
+// ausgabeNamenParam("Lawrence");
+// // Argumente sind Daten für Parameter
 
-function ausgabeNamenParam(firstName) { //Funktion + Parameter
-    console.log("hallo " + firstName + "!");
+// function ausgabeNamenParam(firstName) { //Funktion + Parameter
+//     console.log("hallo " + firstName + "!");
+// }
+
+/*******Funktionen 02c *****/
+// 2c Mehrere Parameter
+
+ausgabeNamenParams("Max", "Mütze");
+ausgabeNamenParams(prompt("Vorname?"),prompt("Nachname?"));
+
+
+function ausgabeNamenParams(firstName, familyName) {
+    console.log("hallo " + firstName + " " + familyName +"!");
 }
+
